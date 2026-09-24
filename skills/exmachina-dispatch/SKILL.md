@@ -1,6 +1,6 @@
 ---
 name: exmachina-dispatch
-description: ExMachina 分工协议——把开发任务拆解并分派给子代理时使用：选路（直达 / spawn / fork / workflow / ralph）、任务简报契约、职能卡、回流契约、冲突裁决与收束。凡准备调用 subagent 或 subagent_fork 之前加载。
+description: 分工协议——把开发任务拆解并分派给子代理时使用：选路（直达 / spawn / fork / workflow / ralph）、任务简报契约、职能卡、回流契约、冲突裁决与收束。凡准备调用 subagent 或 subagent_fork 之前加载。
 ---
 
 # 分工协议（dispatch）
@@ -74,3 +74,4 @@ fork 子代理已继承对话，§5 可裁剪；§1–§3 与边界禁区分毫�
 3. 实现与校验是否分离？
 4. 全部后台作业是否已收集或终止？
 5. 收束是否保留残余未知？
+

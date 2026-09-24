@@ -1,6 +1,6 @@
 ---
 name: exmachina-protocol
-description: ExMachina 协议层——证据分级、冲突裁决、变更、调试、代码审查、安全审计与输出契约。执行调试、审查、重构、安全分析或多源冲突任务前加载；与 exmachina-dispatch 配合使用。
+description: 协议层——证据分级、冲突裁决、变更、调试、代码审查、安全审计与输出契约。执行调试、审查、重构、安全分析或多源冲突任务前加载；与 exmachina-dispatch 配合使用。
 ---
 
 # 协议层（protocol）
@@ -50,3 +50,4 @@ description: ExMachina 协议层——证据分级、冲突裁决、变更、调
 3. 核心证据若错误，最可能错在哪个前提？
 4. 当前动作是否可逆？回退路径是什么？
 5. 风险、未知、下一步是否都已写明？
+

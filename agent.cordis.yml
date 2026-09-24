@@ -1,5 +1,4 @@
-# The `exmachina` agent preset: the full coding agent re-composed as an
-# ExMachina-style mechanical-intelligence orchestrator.
+# The `exmachina` agent preset: the full coding agent composed as a mechanical-intelligence orchestrator.
 #
 # Base: the shipped `standard` preset. Deviations:
 #   1. `persona` — the 全连结指挥体 identity: core criteria (理性 / 平淡 /
@@ -90,7 +89,7 @@
 
 # The host skill registry is layered per scope; both rows register into THIS
 # preset's layer. `customSkillDirs` adds the preset's own `skills/` directory
-# (the ExMachina 协议层), resolved relative to the preset directory so it
+# (the 协议层), resolved relative to the preset directory so it
 # travels with every install of this preset.
 - id: skill-filesystem
   name: '@deepseek-ai/dsh-skill-filesystem'
@@ -244,3 +243,4 @@
   config:
     fetch: true
     searchTimeoutMs: 60000
+
