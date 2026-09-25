@@ -76,7 +76,7 @@
    （未设置 DSH_HOME 时为 %USERPROFILE%\.dsh\.agent-presets\exmachina；目录名必须是 exmachina。
    若该目录已存在，先向用户确认是否覆盖。）
 2. 通过 agentPresets 服务的 standingKeyFor("exmachina") 做真实挂载验证，报告 OK 或失败原因。
-3. 验证通过后告知用户：新开会话，在预设选择器选择「机械智能」，确认工具目录含 subagent 与 subagent_fork。
+3. 验证通过后告知用户：新开会话，在预设选择器选择「ExMachina」，确认工具目录含 subagent 与 subagent_fork。
 注意：预设根在会话工作区之外，写入被沙箱拒绝时按正规流程单次升级并说明理由，属预期。
 ```
 
@@ -96,7 +96,7 @@ cd DSH-ExMachina
 
 ### 验证
 
-1. 重启 DSH 或新开会话，预设选择器出现「机械智能」。
+1. 重启 DSH 或新开会话，预设选择器出现「ExMachina」。
 2. 新开一个该预设的会话，工具目录包含 `subagent` 与 `subagent_fork`。
 3. 交给它一个多阶段开发任务，观察是否先收拢边界、再按职能卡并行分派子代理。
 
@@ -113,3 +113,4 @@ cd DSH-ExMachina
 ## License
 
 MIT
+

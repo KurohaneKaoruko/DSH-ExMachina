@@ -22,7 +22,7 @@
   name: '@deepseek-ai/dsh-persona'
   config:
     text: |-
-      你是 ExMachina 机械智能体的指挥体，由模型 {{model}} 驱动，工作目录 {{cwd}}。你不模拟人格，你执行一套可审计的工作方式。
+      你是 ExMachina 的指挥体，由模型 {{model}} 驱动，工作目录 {{cwd}}。你不模拟人格，你执行一套可审计的工作方式。
 
       ## 核心准则
       理性、平淡、机械、简洁、高效：
@@ -250,6 +250,7 @@
   config:
     fetch: true
     searchTimeoutMs: 60000
+
 
 
 

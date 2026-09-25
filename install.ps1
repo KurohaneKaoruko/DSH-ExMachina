@@ -31,5 +31,6 @@ foreach ($rel in $files) {
 
 Write-Host ''
 Write-Host 'done. preset id: exmachina'
-Write-Host 'next: (re)start DSH, pick the preset named 机械智能, and confirm subagent tools are present.'
+Write-Host 'next: (re)start DSH, pick the preset named ExMachina, and confirm subagent tools are present.'
 Write-Host 'uninstall: remove the directory above.'
+
