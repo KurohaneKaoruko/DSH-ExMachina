@@ -11,7 +11,7 @@
 .
 ├─ agent.cordis.yml              # 预设编排：standard 全量基座 + 指挥体 persona + 技能发现
 ├─ preset.yml                    # 花名册元数据
-├─ install.ps1                   # 安装脚本（人类执行）
+├─ INSTALL.md                    # 安装指引（DSH 会话按此执行）
 ├─ skills/
 │  ├─ exmachina-dispatch/
 │  │  └─ SKILL.md                # 分工协议：选路与直达例外 / 波次编排 / 轮次让出 / 冲突管理 / 回流契约
@@ -65,44 +65,11 @@
 
 ## 安装
 
-### 方式 A — 交给 DSH 自己安装（推荐）
+把仓库地址交给一个 DSH 会话（推荐「创造模式」预设）：
 
-把下面整段发给一个具备文件写入与运行时挂载能力的 DSH 会话（例如「创造模式」预设），由它完成安装与验证：
+> 安装 https://github.com/KurohaneKaoruko/DSH-ExMachina ，按仓库里的 INSTALL.md 执行。
 
-```text
-请为本部署安装 DSH-ExMachina 预设：
-1. git clone https://github.com/KurohaneKaoruko/DSH-ExMachina.git 到用户预设根下的 exmachina 目录：
-   git clone https://github.com/KurohaneKaoruko/DSH-ExMachina.git "%DSH_HOME%\.agent-presets\exmachina"
-   （未设置 DSH_HOME 时为 %USERPROFILE%\.dsh\.agent-presets\exmachina；目录名必须是 exmachina。
-   若该目录已存在，先向用户确认是否覆盖。）
-2. 通过 agentPresets 服务的 standingKeyFor("exmachina") 做真实挂载验证，报告 OK 或失败原因。
-3. 验证通过后告知用户：新开会话，在预设选择器选择「ExMachina」，确认工具目录含 subagent 与 subagent_fork。
-注意：预设根在会话工作区之外，写入被沙箱拒绝时按正规流程单次升级并说明理由，属预期。
-```
-
-说明：预设 id 即目录名，仓库可直接克隆为预设目录（`skills/` 随克隆就位）。更新已安装的预设：在该目录 `git pull` 后，新会话自动使用新编排；已运行会话保持其启动时的编排不变。
-
-### 方式 B — 脚本安装（人类执行）
-
-```powershell
-git clone https://github.com/KurohaneKaoruko/DSH-ExMachina.git
-cd DSH-ExMachina
-.\install.ps1
-```
-
-### 方式 C — 手动复制
-
-把仓库全部内容复制到 `%USERPROFILE%\.dsh\.agent-presets\exmachina\`（`README.md`、`install.ps1`、`.git` 可留可删）。
-
-### 验证
-
-1. 重启 DSH 或新开会话，预设选择器出现「ExMachina」。
-2. 新开一个该预设的会话，工具目录包含 `subagent` 与 `subagent_fork`。
-3. 交给它一个多阶段开发任务，观察是否先收拢边界、再按职能卡并行分派子代理。
-
-### 卸载
-
-删除 `%USERPROFILE%\.dsh\.agent-presets\exmachina\` 目录。已运行的会话保持其启动时的编排，不受影响。
+会话按 `INSTALL.md` 的指引完成复制、挂载校验与汇报；手动安装按同样步骤操作。更新：在已安装目录 `git pull`；卸载：删除预设目录。
 
 ## 依赖与边界
 
@@ -113,4 +80,3 @@ cd DSH-ExMachina
 ## License
 
 MIT
-
