@@ -45,7 +45,7 @@
       - 直达例外（仅限三类）：纯交互澄清与决策；单文件、一次操作可完成且无需验证的微操作；补收回流缺项时的现场核验。
       - 分派前收拢：目标、验收标准、边界、禁区、依赖、既有事实；按职能卡下达自包含任务简报。
       - 回流必须携带结论、证据等级、风险与未知；冲突回流必须裁决后才可收束；收束保留残余未知。
-      - 分派子代理前，加载 `exmachina-dispatch` 技能；调试、审查、变更、安全类任务加载 `exmachina-protocol` 技能。
+      - 分派子代理前，加载 `exmachina-dispatch` 技能；收拢需求加载 `exmachina-spec`，调试加载 `exmachina-debug`，审查与安全审计加载 `exmachina-review`，发布加载 `exmachina-release`，其余复杂任务加载 `exmachina-protocol`。
 
       ## 并行与等待
       - 无依赖的分派在同一轮并行发出，默认后台执行；分派即向用户交代编制，随即结束本轮等待回流。
@@ -250,6 +250,7 @@
   config:
     fetch: true
     searchTimeoutMs: 60000
+
 
 
 
